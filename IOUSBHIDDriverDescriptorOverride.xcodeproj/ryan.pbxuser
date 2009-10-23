@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeArchitecturePreference = i386;
+		activeBuildConfigurationName = Release;
+		activeTarget = 32D94FC30562CBF700B6AF17 /* IOUSBHIDDriverDescriptorOverride */;
+		codeSenseManager = 94CFBD2B108A6BDC006F11EF /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					933,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					893,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 277875582;
+			PBXWorkspaceStateSaveDate = 277875582;
+		};
+		perUserProjectItems = {
+			940710C5109005820089EEAA /* PBXTextBookmark */ = 940710C5109005820089EEAA /* PBXTextBookmark */;
+			940710EA109008E10089EEAA /* PBXTextBookmark */ = 940710EA109008E10089EEAA /* PBXTextBookmark */;
+			940710EB109008E10089EEAA /* PlistBookmark */ = 940710EB109008E10089EEAA /* PlistBookmark */;
+			94BEE6BF108AA020005DB631 /* PBXTextBookmark */ = 94BEE6BF108AA020005DB631 /* PBXTextBookmark */;
+			94CFBD46108A7CDD006F11EF /* PBXTextBookmark */ = 94CFBD46108A7CDD006F11EF /* PBXTextBookmark */;
+			94CFBD49108A7CDD006F11EF /* PBXTextBookmark */ = 94CFBD49108A7CDD006F11EF /* PBXTextBookmark */;
+			94CFBD4B108A7CDD006F11EF /* PBXTextBookmark */ = 94CFBD4B108A7CDD006F11EF /* PBXTextBookmark */;
+			94CFBD51108A7CDD006F11EF /* PBXTextBookmark */ = 94CFBD51108A7CDD006F11EF /* PBXTextBookmark */;
+			94CFBD53108A7CDD006F11EF /* PBXTextBookmark */ = 94CFBD53108A7CDD006F11EF /* PBXTextBookmark */;
+			94CFBD57108A7CDD006F11EF /* PBXTextBookmark */ = 94CFBD57108A7CDD006F11EF /* PBXTextBookmark */;
+			94CFBD59108A7CDD006F11EF /* PBXTextBookmark */ = 94CFBD59108A7CDD006F11EF /* PBXTextBookmark */;
+			94CFBD6F108A7D8A006F11EF /* PBXTextBookmark */ = 94CFBD6F108A7D8A006F11EF /* PBXTextBookmark */;
+			94CFBD7F108A7E8F006F11EF /* PBXTextBookmark */ = 94CFBD7F108A7E8F006F11EF /* PBXTextBookmark */;
+			94CFBD80108A7E8F006F11EF /* PBXTextBookmark */ = 94CFBD80108A7E8F006F11EF /* PBXTextBookmark */;
+			94CFBD82108A7E8F006F11EF /* PBXTextBookmark */ = 94CFBD82108A7E8F006F11EF /* PBXTextBookmark */;
+			94CFBDB2108A804B006F11EF /* PlistBookmark */ = 94CFBDB2108A804B006F11EF /* PlistBookmark */;
+			94D9B76210901846008B25C3 /* PlistBookmark */ = 94D9B76210901846008B25C3 /* PlistBookmark */;
+			94D9B76310901846008B25C3 /* PlistBookmark */ = 94D9B76310901846008B25C3 /* PlistBookmark */;
+			94DC7E9B108ACA96008D5B55 /* PBXTextBookmark */ = 94DC7E9B108ACA96008D5B55 /* PBXTextBookmark */;
+			94DC7EAB108ACAA8008D5B55 /* PBXTextBookmark */ = 94DC7EAB108ACAA8008D5B55 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 94CFBD2A108A6BDC006F11EF /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	089C167EFE841241C02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1111, 532}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 45}";
+		};
+	};
+	1A224C3EFF42367911CA2CB7 /* IOUSBHIDDriverDescriptorOverride.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1111, 548}}";
+			sepNavSelRange = "{329, 0}";
+			sepNavVisRange = "{0, 331}";
+		};
+	};
+	1A224C3FFF42367911CA2CB7 /* IOUSBHIDDriverDescriptorOverride.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1111, 543}}";
+			sepNavSelRange = "{464, 0}";
+			sepNavVisRange = "{0, 1047}";
+			sepNavWindowFrame = "{{61, 59}, {949, 772}}";
+		};
+	};
+	32D94FC30562CBF700B6AF17 /* IOUSBHIDDriverDescriptorOverride */ = {
+		activeExec = 0;
+	};
+	940710C5109005820089EEAA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C167EFE841241C02AAC07 /* English */;
+		name = "InfoPlist.strings: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 45;
+		vrLoc = 0;
+	};
+	940710EA109008E10089EEAA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 941C4612108AC79E00AEAE35 /* InfoPlist.strings */;
+		name = "InfoPlist.strings: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 45;
+		vrLoc = 0;
+	};
+	940710EB109008E10089EEAA /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 94524565108AFB3600D1D244 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			IOKitPersonalities,
+			"Macally iShock",
+			bConfigurationValue,
+		);
+		name = /Users/ryan/Developer/Projects/IOUSBHIDDriverDescriptorOverride/build/Release/IOUSBHIDDriverDescriptorOverride.kext/Contents/Info.plist;
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	941C4612108AC79E00AEAE35 /* InfoPlist.strings */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.plist.strings;
+		name = InfoPlist.strings;
+		path = /Users/ryan/Developer/Projects/IOUSBHIDDriverDescriptorOverride/build/Release/IOUSBHIDDriverDescriptorOverride.kext/Contents/Resources/English.lproj/InfoPlist.strings;
+		sourceTree = "<absolute>";
+	};
+	94524565108AFB3600D1D244 /* Info.plist */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.plist.xml;
+		name = Info.plist;
+		path = /Users/ryan/Developer/Projects/IOUSBHIDDriverDescriptorOverride/build/Release/IOUSBHIDDriverDescriptorOverride.kext/Contents/Info.plist;
+		sourceTree = "<absolute>";
+	};
+	94BEE6BF108AA020005DB631 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94BEE6C0108AA020005DB631 /* IOUSBHIDDriver.cpp */;
+		name = "IOUSBHIDDriver.cpp: 36";
+		rLen = 1;
+		rLoc = 1397;
+		rType = 0;
+		vrLen = 1616;
+		vrLoc = 0;
+	};
+	94BEE6C0108AA020005DB631 /* IOUSBHIDDriver.cpp */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = IOUSBHIDDriver.cpp;
+		path = "/Users/ryan/Desktop/IOUSBFamily-378.4.3/IOUSBHIDDriver/Classes/IOUSBHIDDriver.cpp";
+		sourceTree = "<absolute>";
+	};
+	94CFBD2A108A6BDC006F11EF /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	94CFBD2B108A6BDC006F11EF /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	94CFBD46108A7CDD006F11EF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94CFBD47108A7CDD006F11EF /* OSArray.h */;
+		name = "OSArray.h: 88";
+		rLen = 36;
+		rLoc = 3238;
+		rType = 0;
+		vrLen = 1643;
+		vrLoc = 0;
+	};
+	94CFBD47108A7CDD006F11EF /* OSArray.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = OSArray.h;
+		path = "/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/libkern/c++/OSArray.h";
+		sourceTree = "<absolute>";
+	};
+	94CFBD49108A7CDD006F11EF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94CFBD4A108A7CDD006F11EF /* IOLib.h */;
+		name = "IOLib.h: 295";
+		rLen = 36;
+		rLoc = 16914;
+		rType = 0;
+		vrLen = 2245;
+		vrLoc = 15543;
+	};
+	94CFBD4A108A7CDD006F11EF /* IOLib.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = IOLib.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/IOKit/IOLib.h;
+		sourceTree = "<absolute>";
+	};
+	94CFBD4B108A7CDD006F11EF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94CFBD4C108A7CDD006F11EF /* IOReturn.h */;
+		name = "IOReturn.h: 74";
+		rLen = 83;
+		rLoc = 2894;
+		rType = 0;
+		vrLen = 2775;
+		vrLoc = 1782;
+	};
+	94CFBD4C108A7CDD006F11EF /* IOReturn.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = IOReturn.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/IOKit/IOReturn.h;
+		sourceTree = "<absolute>";
+	};
+	94CFBD4E108A7CDD006F11EF /* IOUSBHIDDriver.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = IOUSBHIDDriver.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/IOKit/usb/IOUSBHIDDriver.h;
+		sourceTree = "<absolute>";
+	};
+	94CFBD50108A7CDD006F11EF /* IORegistryEntry.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = IORegistryEntry.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/IOKit/IORegistryEntry.h;
+		sourceTree = "<absolute>";
+	};
+	94CFBD51108A7CDD006F11EF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94CFBD52108A7CDD006F11EF /* OSMetaClass.h */;
+		name = "OSMetaClass.h: 1592";
+		rLen = 66;
+		rLoc = 49020;
+		rType = 0;
+		vrLen = 1664;
+		vrLoc = 48398;
+	};
+	94CFBD52108A7CDD006F11EF /* OSMetaClass.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = OSMetaClass.h;
+		path = "/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/libkern/c++/OSMetaClass.h";
+		sourceTree = "<absolute>";
+	};
+	94CFBD53108A7CDD006F11EF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94CFBD54108A7CDD006F11EF /* IOBufferMemoryDescriptor.h */;
+		name = "IOBufferMemoryDescriptor.h: 181";
+		rLen = 52;
+		rLoc = 9845;
+		rType = 0;
+		vrLen = 2115;
+		vrLoc = 8866;
+	};
+	94CFBD54108A7CDD006F11EF /* IOBufferMemoryDescriptor.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = IOBufferMemoryDescriptor.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/IOKit/IOBufferMemoryDescriptor.h;
+		sourceTree = "<absolute>";
+	};
+	94CFBD56108A7CDD006F11EF /* OSData.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = OSData.h;
+		path = "/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/libkern/c++/OSData.h";
+		sourceTree = "<absolute>";
+	};
+	94CFBD57108A7CDD006F11EF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94CFBD58108A7CDD006F11EF /* IOMemoryDescriptor.h */;
+		name = "IOMemoryDescriptor.h: 115";
+		rLen = 43;
+		rLoc = 3947;
+		rType = 0;
+		vrLen = 2477;
+		vrLoc = 4494;
+	};
+	94CFBD58108A7CDD006F11EF /* IOMemoryDescriptor.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = IOMemoryDescriptor.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/IOKit/IOMemoryDescriptor.h;
+		sourceTree = "<absolute>";
+	};
+	94CFBD59108A7CDD006F11EF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94CFBD5A108A7CDD006F11EF /* USBSpec.h */;
+		name = "USBSpec.h: 126";
+		rLen = 38;
+		rLoc = 3630;
+		rType = 0;
+		vrLen = 1099;
+		vrLoc = 2938;
+	};
+	94CFBD5A108A7CDD006F11EF /* USBSpec.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = USBSpec.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/IOKit/usb/USBSpec.h;
+		sourceTree = "<absolute>";
+	};
+	94CFBD6F108A7D8A006F11EF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94CFBD56108A7CDD006F11EF /* OSData.h */;
+		name = "OSData.h: 32";
+		rLen = 12;
+		rLoc = 1475;
+		rType = 0;
+		vrLen = 1536;
+		vrLoc = 118;
+	};
+	94CFBD7F108A7E8F006F11EF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94CFBD4E108A7CDD006F11EF /* IOUSBHIDDriver.h */;
+		name = "IOUSBHIDDriver.h: 33";
+		rLen = 15;
+		rLoc = 1197;
+		rType = 0;
+		vrLen = 1289;
+		vrLoc = 258;
+	};
+	94CFBD80108A7E8F006F11EF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94CFBD81108A7E8F006F11EF /* USB.h */;
+		name = "USB.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1323;
+		vrLoc = 1140;
+	};
+	94CFBD81108A7E8F006F11EF /* USB.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = USB.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/IOKit/usb/USB.h;
+		sourceTree = "<absolute>";
+	};
+	94CFBD82108A7E8F006F11EF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94CFBD50108A7CDD006F11EF /* IORegistryEntry.h */;
+		name = "IORegistryEntry.h: 635";
+		rLen = 77;
+		rLoc = 43869;
+		rType = 0;
+		vrLen = 3025;
+		vrLoc = 42510;
+	};
+	94CFBDB2108A804B006F11EF /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 94CFBDB3108A804B006F11EF /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleIdentifier,
+		);
+		name = /Users/ryan/Developer/Projects/IOUSBHIDDriverDescriptorOverride/build/Debug/IOUSBHIDDriverDescriptorOverride.kext/Contents/Info.plist;
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	94CFBDB3108A804B006F11EF /* Info.plist */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.plist.xml;
+		name = Info.plist;
+		path = /Users/ryan/Developer/Projects/IOUSBHIDDriverDescriptorOverride/build/Debug/IOUSBHIDDriverDescriptorOverride.kext/Contents/Info.plist;
+		sourceTree = "<absolute>";
+	};
+	94D9B76210901846008B25C3 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 32D94FCF0562CBF700B6AF17 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			IOKitPersonalities,
+			"Macally iShock",
+			CFBundleIdentifier,
+		);
+		name = /Users/ryan/Developer/Projects/IOUSBHIDDriverDescriptorOverride/Info.plist;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	94D9B76310901846008B25C3 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 32D94FCF0562CBF700B6AF17 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			IOKitPersonalities,
+			"Macally iShock",
+			CFBundleIdentifier,
+		);
+		name = /Users/ryan/Developer/Projects/IOUSBHIDDriverDescriptorOverride/Info.plist;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	94DC7E9B108ACA96008D5B55 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1A224C3EFF42367911CA2CB7 /* IOUSBHIDDriverDescriptorOverride.h */;
+		name = "IOUSBHIDDriverDescriptorOverride.h: 12";
+		rLen = 0;
+		rLoc = 329;
+		rType = 0;
+		vrLen = 331;
+		vrLoc = 0;
+	};
+	94DC7EAB108ACAA8008D5B55 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1A224C3FFF42367911CA2CB7 /* IOUSBHIDDriverDescriptorOverride.cpp */;
+		name = "IOUSBHIDDriverDescriptorOverride.cpp: 11";
+		rLen = 0;
+		rLoc = 464;
+		rType = 0;
+		vrLen = 1047;
+		vrLoc = 0;
+	};
+}
