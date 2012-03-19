@@ -22,6 +22,8 @@
 	<string>1</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>OSBundleRequired</key>
+	<string>Console</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>Noppoo Choc Mini (primary)</key>
