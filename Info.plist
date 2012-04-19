@@ -72,6 +72,52 @@
 			<key>bInterfaceNumber</key>
 			<integer>1</integer>
 		</dict>
+		<key>Noppoo Choc Pro (primary)</key>
+		<dict>
+			<key>HIDDefaultBehavior</key>
+			<string></string>
+			<key>ReportDescriptorOverride</key>
+			<data>BQEJBqEBBQgZASkDFQAlAXUBlQORApUFkQEFBxngKeeVCIECGQQpKJUlgQIJTwlQCSsJLAlRCVIJU5UHgQIZWSlklQyBAsA=</data>
+			<key>CFBundleIdentifier</key>
+			<string>ryangoulden.driver.${PRODUCT_NAME:rfc1034Identifier}</string>
+			<key>IOClass</key>
+			<string>IOUSBHIDDriverDescriptorOverride</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBInterface</string>
+			<key>idVendor</key>
+			<integer>1267</integer>
+			<key>idProduct</key>
+			<integer>23130</integer>
+			<key>bcdDevice</key>
+			<integer>320</integer>
+			<key>bConfigurationValue</key>
+			<integer>1</integer>
+			<key>bInterfaceNumber</key>
+			<integer>0</integer>
+		</dict>
+		<key>Noppoo Choc Pro (secondary)</key>
+		<dict>
+			<key>HIDDefaultBehavior</key>
+			<string></string>
+			<key>ReportDescriptorOverride</key>
+			<data>BQwJAaEBhQEZACo8AhUAJjwClQF1EIEAwAUBCYChAYUCGYEpgxUAJQF1AZUDgQKVBYEBwAUBCQahAYUDBQcZPClOFQAlAZUTgQIJKQkqCS0JLpUEgQIZUylYlQaBAhkwKTuVDIECGYUpi5UHgQIZkCmWlQaBAgllCS+VAoECwA==</data>
+			<key>CFBundleIdentifier</key>
+			<string>ryangoulden.driver.${PRODUCT_NAME:rfc1034Identifier}</string>
+			<key>IOClass</key>
+			<string>IOUSBHIDDriverDescriptorOverride</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBInterface</string>
+			<key>idVendor</key>
+			<integer>1267</integer>
+			<key>idProduct</key>
+			<integer>23130</integer>
+			<key>bcdDevice</key>
+			<integer>320</integer>
+			<key>bConfigurationValue</key>
+			<integer>1</integer>
+			<key>bInterfaceNumber</key>
+			<integer>1</integer>
+		</dict>
 		<key>Griffin PowerMate</key>
 		<dict>
 			<key>ReportDescriptorOverride</key>
