@@ -21,6 +21,37 @@ for
  * Griffin PowerMate
  * Macally iShock
 
+Noppoo
+------
+
+There are two problems when using a Noppoo keyboard on OS X
+
+ * duplicate keypresses
+ * modifier keys only working with some keys
+
+The descriptors have an overlap by specifying both an immediate list
+of usages, and a range of usages. This causes OS X to send _both_
+usages when a key in the overlapping range is pressed. The solution
+used here is to split the item into two separate items: one for the
+immediate list and the other for the range. For the specifics of the
+descriptors and the changes to make them work, see the
+[unencoded versions][descriptor-source].
+
+OS X has modifier state local to each keyboard; The Noppoo implements
+NKRO with two keyboard interfaces but only of which has the modifier
+state. This makes it impossible to use modifiers with any key on the
+non-modifier keyboard.
+
+This project only fixes the problems caused by the descriptor. However
+installing [KeyRemap4MacBook][] has the side effect of making modifier
+state global.
+
+The combination of this extension and KeyRemap4MacBook should make the
+Noppoo keyboards behave as expected.
+
+[descriptor-source]: https://gist.github.com/1442127
+[keyremap4macbook]: http://pqrs.org/macosx/keyremap4macbook/
+
 Installation
 ------------
 
