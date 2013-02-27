@@ -6,7 +6,8 @@ require 'bundler/setup'
 require 'yaml'
 require 'pp'
 
-require_relative 'hidutil'
+$LOAD_PATH << File.dirname(__FILE__)
+require 'hidutil'
 
 def main
   command = ARGV[0]

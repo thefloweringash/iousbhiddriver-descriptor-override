@@ -6,7 +6,8 @@ require 'bundler/setup'
 require 'libusb'
 require 'pp'
 
-require_relative 'hidutil.rb'
+$LOAD_PATH << File.dirname(__FILE__)
+require 'hidutil'
 
 usb = LIBUSB::Context.new
 usb.devices(:bClass => LIBUSB::CLASS_HID).each do |dev|
