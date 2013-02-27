@@ -2,3 +2,4 @@ build
 IOUSBHIDDriverDescriptorOverride.xcodeproj/project.xcworkspace
 IOUSBHIDDriverDescriptorOverride.xcodeproj/*.pbxuser
 IOUSBHIDDriverDescriptorOverride.xcodeproj/xcuserdata
+Info.plist

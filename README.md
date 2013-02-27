@@ -12,8 +12,8 @@ incorrect.
 Supported Devices
 -----------------
 
- * Noppoo Choc Mini
- * Noppoo Choc Pro
+ * Noppoo Choc Mini (1006:0022)
+ * Noppoo Choc Pro (04f3:5a5a)
 
 Including the support from the [original project](#acknowledgements)
 for
@@ -59,6 +59,11 @@ The [Downloads][] section contains installer packages.
 
 To build and install from source
 
+	# dependencies
+	gem install bundler
+	bundle install --without scan
+	
+	# build
 	xcodebuild
 	sudo cp -r build/Release/IOUSBHIDDriverDescriptorOverride.kext \
 	    /System/Library/Extensions
@@ -66,6 +71,29 @@ To build and install from source
 	    /System/Library/Extensions/IOUSBHIDDriverDescriptorOverride.kext
 
 [downloads]: /thefloweringash/iousbhiddriver-descriptor-override/downloads
+
+Unsupported Devices
+-------------------
+
+The Noppoo devices have a range of identifiers and descriptors. If a
+device is not supported, there is an experimental feature that will
+generate the Info.plist section for any connected device that has the
+Noppoo-style overlapping descriptors.
+
+	# dependencies
+	brew install libusb
+	bundle install --without ""
+	
+	# build
+	rake scan
+
+A file for your keyboard will be generated in the `descriptors`
+directory. Follow the instructions in the previous section to install
+the resulting module.
+
+This feature is experimental, but works for limited test cases. If the
+resulting .kext works with your keyboard, submit a pull request with
+the new descriptors, otherwise open an issue with the new descriptors.
 
 Troubleshooting
 ---------------
