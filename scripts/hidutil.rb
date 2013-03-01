@@ -288,7 +288,7 @@ class HIDInfo
         :len => (item.data.length if item.data) || 0,
         :data => (unpack_num(item.data) if item.data)
       }
-      outputs = item.tag_pos if item.tag_pos
+      outpos = item.tag_pos if item.tag_pos
     end
     tag_stream
   end
