@@ -293,6 +293,10 @@ class HIDInfo
     tag_stream
   end
 
+  def self.fixed_tagstream(bytes)
+    HIDInfo.items_to_tag_stream(HIDInfo.fix(HIDInfo.parse(bytes)))
+  end
+
   def self.encode(tagstream)
     result = ""
     tagstream.each do |t|
