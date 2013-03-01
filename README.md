@@ -12,7 +12,7 @@ incorrect.
 Supported Devices
 -----------------
 
- * Noppoo Choc Mini (1006:0022)
+ * Noppoo Choc Mini (1006:0022, 1007:8400)
  * Noppoo Choc Pro (04f3:5a5a)
 
 Including the support from the [original project](#acknowledgements)
