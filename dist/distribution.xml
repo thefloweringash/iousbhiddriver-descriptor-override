@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<installer-gui-script minSpecVersion="1">
+    <title>IOUSBHIDDriverDescriptorOverride</title>
+    <pkg-ref id="ryangoulden.driver.IOUSBHIDDriverDescriptorOverride"/>
+    <options customize="never" require-scripts="false"/>
+    <choices-outline>
+        <line choice="default">
+            <line choice="ryangoulden.driver.IOUSBHIDDriverDescriptorOverride"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="ryangoulden.driver.IOUSBHIDDriverDescriptorOverride" visible="false">
+        <pkg-ref id="ryangoulden.driver.IOUSBHIDDriverDescriptorOverride"/>
+    </choice>
+    <pkg-ref id="ryangoulden.driver.IOUSBHIDDriverDescriptorOverride" version="1.0.0" onConclusion="RequireRestart">kext.pkg</pkg-ref>
+    <domains enable_localSystem="true" enable_anywhere="false" enable_currentUserHome="false"/>
+
+    <readme file="README.md" mime-type="text/plain"/>
+    <license file="COPYING" mime-type="text/plain"/>
+</installer-gui-script>
