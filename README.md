@@ -70,7 +70,7 @@ To build and install from source
 	sudo kextutil \
 	    /System/Library/Extensions/IOUSBHIDDriverDescriptorOverride.kext
 
-[downloads]: /thefloweringash/iousbhiddriver-descriptor-override/downloads
+[downloads]: https://thefloweringash.com/iousbhiddriver-descriptor-override/downloads/
 
 Unsupported Devices
 -------------------
