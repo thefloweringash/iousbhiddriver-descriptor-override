@@ -21,6 +21,7 @@ Dir['descriptors/*.yaml'].each do |f|
   descriptors.each_with_index do |descriptor, index|
     broken_descriptor = descriptor.delete 'hidReportDescriptor'
     descriptor.merge!({
+      'HIDDefaultBehavior' => '',
       'IOClass' => 'IOUSBHIDDriverDescriptorOverride',
       'IOProviderClass' => 'IOUSBInterface',
       'CFBundleIdentifier' => 'ryangoulden.driver.${PRODUCT_NAME:rfc1034Identifier}',
