@@ -3,6 +3,7 @@ require 'bundler/setup'
 
 require 'plist'
 require 'pp'
+require 'yaml'
 
 $LOAD_PATH << File.dirname(__FILE__)
 require 'hidutil'

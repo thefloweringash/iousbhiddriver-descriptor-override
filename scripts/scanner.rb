@@ -5,6 +5,7 @@ require 'bundler/setup'
 
 require 'libusb'
 require 'pp'
+require 'yaml'
 
 $LOAD_PATH << File.dirname(__FILE__)
 require 'hidutil'
