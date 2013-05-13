@@ -294,7 +294,7 @@ class HIDInfo
   end
 
   def self.fixed_tagstream(bytes)
-    HIDInfo.items_to_tag_stream(HIDInfo.fix(HIDInfo.parse(bytes)))
+    items_to_tag_stream(fix(parse(bytes)))
   end
 
   def self.encode(tagstream)
