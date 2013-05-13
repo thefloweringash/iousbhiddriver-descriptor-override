@@ -63,6 +63,7 @@ module HIDTags
   end
 
   USAGE = @@hid_tag_by_name['USAGE']
+  USAGE_PAGE = @@hid_tag_by_name['USAGE_PAGE']
   USAGE_MINIMUM = @@hid_tag_by_name['USAGE_MINIMUM']
   USAGE_MAXIMUM = @@hid_tag_by_name['USAGE_MAXIMUM']
   REPORT_COUNT = @@hid_tag_by_name['REPORT_COUNT']
@@ -113,17 +114,30 @@ class MainItem
     @tag_pos = nil
   end
 
-  def usages_count
-    total = 0
-    max_item = local_state[HIDTags::USAGE_MAXIMUM]
-    min_item = local_state[HIDTags::USAGE_MINIMUM]
+  def usage_range
+    max_item = @local_state[HIDTags::USAGE_MAXIMUM]
+    min_item = @local_state[HIDTags::USAGE_MINIMUM]
     if max_item and min_item
       max = unpack_num(max_item[:data])
       min = unpack_num(min_item[:data])
-      total += (max - min) + 1
+      return (min..max)
     end
+  end
 
-    usages = local_state[HIDTags::USAGE]
+  def immediate_usages
+    usages = @local_state[HIDTags::USAGE]
+    if usages
+      usages.map { |x| unpack_num(x[:data]) }
+    end
+  end
+
+  def usages_count
+    total = 0
+
+    r = usage_range
+    total += (r.max - r.min) + 1 if r
+
+    usages = @local_state[HIDTags::USAGE]
     total += usages.length if usages
 
     total
@@ -172,6 +186,20 @@ class MainItem
     all_tags.sort! do |(ak,av),(bk,bv)|
       compare_with_nils_last(av[:pos], bv[:pos])
     end
+  end
+
+  def [](tag)
+    result = @local_state[tag] || @global_state[tag]
+    result[:data] if result
+  end
+
+  def includes_usage?(page, usage)
+    p = unpack_num(self[HIDTags::USAGE_PAGE])
+    r = usage_range
+    i = immediate_usages
+    p == page &&
+      ((r.include? usage if r) ||
+       (i.include? usage if i))
   end
 end
 
