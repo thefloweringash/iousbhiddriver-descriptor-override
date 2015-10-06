@@ -27,11 +27,11 @@
 		<key>Griffin PowerMate</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>ryangoulden.driver.${PRODUCT_NAME:rfc1034Identifier}</string>
+			<string>${PRODUCT_BUNDLE_IDENTIFIER}</string>
 			<key>IOClass</key>
 			<string>IOUSBHIDDriverDescriptorOverride</string>
 			<key>IOProviderClass</key>
-			<string>IOUSBInterface</string>
+			<string>IOUSBHostInterface</string>
 			<key>ReportDescriptorOverride</key>
 			<data>
 			BQwJAaEBBQkZASkBFQAlAXUBlQGBAnUHlQGBAQUBCTcV+SUHdQiV
@@ -51,11 +51,11 @@
 		<key>Macally iShock</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>ryangoulden.driver.${PRODUCT_NAME:rfc1034Identifier}</string>
+			<string>${PRODUCT_BUNDLE_IDENTIFIER}</string>
 			<key>IOClass</key>
 			<string>IOUSBHIDDriverDescriptorOverride</string>
 			<key>IOProviderClass</key>
-			<string>IOUSBInterface</string>
+			<string>IOUSBHostInterface</string>
 			<key>ReportDescriptorOverride</key>
 			<data>
 			BQEJBaEBdQiVAgkwCTEVACVENQBFRIEClQEJMBV/JS81f0UvgQIJ
@@ -75,14 +75,14 @@
 	</dict>
 	<key>OSBundleLibraries</key>
 	<dict>
+		<key>com.apple.driver.usb.IOUSBHostHIDDevice</key>
+		<string>1.0.1</string>
 		<key>com.apple.iokit.IOHIDFamily</key>
-		<string>1.6</string>
-		<key>com.apple.iokit.IOUSBHIDDriver</key>
-		<string>3.7.5</string>
+		<string>2.0</string>
 		<key>com.apple.kpi.iokit</key>
-		<string>10.0.0d4</string>
+		<string>15.0</string>
 		<key>com.apple.kpi.libkern</key>
-		<string>10.0.0d4</string>
+		<string>15.0</string>
 	</dict>
 	<key>OSBundleRequired</key>
 	<string>Console</string>
