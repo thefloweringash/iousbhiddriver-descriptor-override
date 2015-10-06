@@ -1,0 +1,11 @@
+---
+- idVendor: 1382
+  idProduct: 12387
+  bcdDevice: 256
+  bConfigurationValue: 1
+  bInterfaceNumber: 0
+  hidReportDescriptor: !binary |-
+    BQEJBqEBBQgZASkDFQAlAXUBlQORApUFkQEFBxngKeeVCIECGQQpKAlPCVAJ
+    KwksCVEJUpUrgQIJU5UBgQIZWSlklQyBAhk8KU4JKQkqCS0JLhUAJQGVF4EC
+    GVMpWJUGgQIZMCk7lQyBAhmFKYuVB4ECGZAplpUGgQIJZQkvlQKBAnUIlQGB
+    AcA=
