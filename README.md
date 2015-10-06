@@ -14,7 +14,8 @@ Supported Devices
 
  * Noppoo Choc Mini (1006:0022, 1007:8400)
  * Noppoo Choc Mid (04d9:1829)
- * Noppoo Choc Pro (04f3:5a5a)
+ * Noppoo Choc Pro (04f3:5a5a, 06fe:104e)
+ * Tt eSPORTS Poseidon ZX (0566:3063)
 
 Including the support from the [original project](#acknowledgements)
 for
