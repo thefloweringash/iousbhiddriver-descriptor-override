@@ -44,7 +44,7 @@ task "package" => ['build', 'tmp/packageroot', 'tmp/packages', 'tmp/resources', 
   sh "cp README.md COPYING tmp/resources"
   sh %Q{pkgbuild --root tmp/packageroot \
                   --component-plist dist/Components.plist \
-                  --install-location /System/Library/Extensions \
+                  --install-location /Library/Extensions \
                   tmp/packages/kext.pkg}
   sh %Q{productbuild --distribution dist/distribution.xml \
                      --package-path tmp/packages \
