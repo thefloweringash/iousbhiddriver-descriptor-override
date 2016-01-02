@@ -12,7 +12,7 @@ require 'hidutil'
 def pretty_tagstream(tagstream, ostream)
   tagstream.each do |i|
     data_str = if i[:len] != 0
-                 data = pack_num(i[:data]).unpack('C*').inspect
+                 data = pack_num(i[:len], i[:data]).unpack('C*').inspect
                end
     tag_name = i[:tag].split('_').map(&:capitalize).join('_')
     ostream.puts "\t#{tag_name}#{data_str || ""}"

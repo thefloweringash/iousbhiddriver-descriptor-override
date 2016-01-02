@@ -1,12 +1,23 @@
-def unpack_num(bytes)
-  bytes.unpack("H*").first.to_i(16)
-end
-def pack_num(num)
-  str = num.to_s 16
-  if str.length % 2 == 1
-    str = "0" + str
+def num_packing(len)
+  case len
+  when 1; "C"
+  when 2; "S<"
+  when 4; "L<"
   end
-  [str].pack("H*")
+end
+def unpack_num(bytes)
+  if packing = num_packing(bytes.length)
+    bytes.unpack(packing).first
+  else
+    raise "Unable to unpack: #{bytes.inspect}"
+  end
+end
+def pack_num(len, num)
+  if packing = num_packing(len)
+    [num].pack(packing)
+  else
+    raise "Unable to pack number #{num} with length #{len}"
+  end
 end
 
 class Tag
@@ -77,89 +88,136 @@ module HIDTags
   end
 end
 
+class UsageRange
+  attr_reader :min_item, :max_item
 
+  def initialize(min_item, max_item)
+    @min_item = min_item
+    @max_item = max_item
+  end
+
+  def without_pos
+    min_item = @min_item.dup
+    min_item.delete(:pos)
+
+    max_item = @max_item.dup
+    max_item.delete(:pos)
+
+    UsageRange.new(min_item, max_item)
+  end
+
+  def min
+    unpack_num(min_item[:data])
+  end
+
+  def max
+    unpack_num(max_item[:data])
+  end
+
+  def includes_usage?(usage)
+    (self.min..self.max).include? usage
+  end
+
+  def count
+    (self.max - self.min) + 1
+  end
+
+  def tags
+    [[HIDTags::USAGE_MINIMUM, min_item],
+     [HIDTags::USAGE_MAXIMUM, max_item]]
+  end
+end
+
+class UsageImmediate
+  attr_reader :item
+
+  def initialize(item)
+    @item = item
+  end
+
+  def without_pos
+    item = @item.dup
+    item.delete(:pos)
+    UsageImmediate.new(item)
+  end
+
+  def includes_usage?(usage)
+    usage == unpack_num(@item[:data])
+  end
+
+  def count
+    1
+  end
+
+  def tags
+    [[HIDTags::USAGE, item]]
+  end
+
+end
+
+class UsageImmediates
+  attr_reader :items
+
+  def initialize(items)
+    @items = items
+  end
+
+  def without_pos
+    UsageImmediates.new(
+      @items.map {|x| x = x.dup; x.delete(:pos); x})
+  end
+
+  def includes_usage?(usage)
+    self.items.any? { |item| unpack_num(item[:data]) == usage }
+  end
+
+  def count
+    self.items.count
+  end
+
+  def tags
+    self.items.map do |item|
+      [HIDTags::USAGE, item]
+    end
+  end
+
+end
 
 class MainItem
-  attr_reader :local_state, :global_state, :tag, :tag_pos, :data
+  attr_reader :local_state, :global_state, :tag, :tag_pos, :data, :usages
 
-  def initialize(tag, data, tag_pos, global_state, local_state)
+  def initialize(tag, data, tag_pos, global_state, local_state, usages)
     @tag = tag
     @data = data
     @tag_pos = tag_pos
     @global_state = global_state
     @local_state = local_state
+    @usages = compact_usages(usages)
   end
 
-  def copy_state_table(table)
+  def state_table_without_pos(table)
     table.inject(Hash.new) do |new_hash,(key,value)|
-      if key == HIDTags::USAGE
-        new_value = Array.new
-        value.each do |usage|
-          new_usage = usage.dup
-          new_usage.delete :pos
-          new_value << new_usage
-        end
-      else
-        new_value = value.dup
-        new_value.delete :pos
-      end
+      new_value = value.dup
+      new_value.delete(:pos)
+
       new_hash[key] = new_value
       new_hash
     end
   end
 
-  def initialize_copy(other)
-    @local_state = copy_state_table(other.local_state)
-    @global_state = copy_state_table(other.global_state)
+  def without_pos!
+    @local_state = state_table_without_pos(@local_state)
+    @global_state = state_table_without_pos(@global_state)
+    @usages = @usages.map {|x| x.without_pos}
     @tag_pos = nil
   end
 
-  def usage_range
-    max_item = @local_state[HIDTags::USAGE_MAXIMUM]
-    min_item = @local_state[HIDTags::USAGE_MINIMUM]
-    if max_item and min_item
-      max = unpack_num(max_item[:data])
-      min = unpack_num(min_item[:data])
-      return (min..max)
-    end
-  end
-
-  def immediate_usages
-    usages = @local_state[HIDTags::USAGE]
-    if usages
-      usages.map { |x| unpack_num(x[:data]) }
-    end
-  end
-
   def usages_count
-    total = 0
-
-    r = usage_range
-    total += (r.max - r.min) + 1 if r
-
-    usages = @local_state[HIDTags::USAGE]
-    total += usages.length if usages
-
-    total
+    usages.map { |x| x.count }.sum
   end
 
   def is_ambiguous?
-    [
-     @local_state[HIDTags::USAGE_MINIMUM],
-     @local_state[HIDTags::USAGE_MAXIMUM],
-     @local_state[HIDTags::USAGE],
-    ].all?
-  end
-
-  def remove_range!
-    @local_state.delete HIDTags::USAGE_MAXIMUM
-    @local_state.delete HIDTags::USAGE_MINIMUM
-    @global_state[HIDTags::REPORT_COUNT][:data] = pack_num(usages_count)
-  end
-
-  def remove_immediate!
-    @local_state.delete HIDTags::USAGE
-    @global_state[HIDTags::REPORT_COUNT][:data] = pack_num(usages_count)
+    usages.count > 1
   end
 
   def compare_with_nils_last(a,b)
@@ -176,13 +234,12 @@ class MainItem
 
   def all_tags
     all_tags = global_state.merge(local_state)
-    immediate_usages = all_tags.delete HIDTags::USAGE
     all_tags = all_tags.to_a
-    if immediate_usages
-      immediate_usages.each do |details|
-        all_tags << [HIDTags::USAGE, details]
-      end
+
+    usages.each do |u|
+      all_tags.concat(u.tags)
     end
+
     all_tags.sort! do |(ak,av),(bk,bv)|
       compare_with_nils_last(av[:pos], bv[:pos])
     end
@@ -195,12 +252,42 @@ class MainItem
 
   def includes_usage?(page, usage)
     p = unpack_num(self[HIDTags::USAGE_PAGE])
-    r = usage_range
-    i = immediate_usages
     p == page &&
-      ((r.include? usage if r) ||
-       (i.include? usage if i))
+      usages.any? {|x| x.includes_usage? usage}
   end
+
+  def item_with_usage(ui)
+    new_item = self.dup
+    new_item.select_usage!(ui)
+    unless ui == 0
+      new_item.without_pos!
+    end
+    new_item
+  end
+
+  def compact_usages(usages)
+    groups = usages.slice_when { |x,y| !(x.class == UsageImmediate and y.class == UsageImmediate) }
+    groups.map do |g|
+      if !g.empty? and g.first.class == UsageImmediate
+        UsageImmediates.new(g.map {|x| x.item})
+      else
+        g.first
+      end
+    end
+  end
+
+  def select_usage!(ui)
+    @usages = [@usages[ui]]
+
+    @global_state = @global_state.dup
+
+    report_count =
+      (@global_state[HIDTags::REPORT_COUNT] = @global_state[HIDTags::REPORT_COUNT].dup)
+
+    report_count[:data] =
+      pack_num(report_count[:len], @usages.first.count)
+  end
+
 end
 
 class HIDInfo
@@ -239,6 +326,7 @@ class HIDInfo
   def self.parse(bytes)
     global_state = Hash.new
     local_state = Hash.new
+    usages = Array.new
 
     result = []
     until bytes.eof
@@ -248,15 +336,30 @@ class HIDInfo
         target_hash = if   tag.is_global? then global_state
                       else local_state end
 
-        if tag == HIDTags::USAGE
-          (target_hash[tag] ||= []) << { :data => data, :pos => tag_pos }
+        item = { :data => data, :len => len, :pos => tag_pos }
+        case tag
+        when HIDTags::USAGE
+          usages << UsageImmediate.new(item)
+        when HIDTags::USAGE_MINIMUM
+          min_item = item
+
+          # pull one more, *must* be USAGE_MAXIMUM
+          tag_pos = bytes.pos
+          tag, len, data = parse_item(bytes)
+          if tag != HIDTags::USAGE_MAXIMUM
+            raise "Minimum/Maximum must occur in pairs"
+          end
+          max_item = { :data => data, :len => len, :pos => tag_pos }
+          usages << UsageRange.new(min_item, max_item)
         else
-          target_hash[tag] = { :data => data, :pos => tag_pos }
+          target_hash[tag] = item
         end
       elsif tag.is_main?
         result << MainItem.new(tag, data, tag_pos,
-                               global_state.dup, local_state)
+                               global_state.dup, local_state,
+                               usages)
         local_state = Hash.new
+        usages = Array.new
       end
     end
     result
@@ -266,17 +369,9 @@ class HIDInfo
     result = []
     items.each do |item|
       if item.is_ambiguous?
-        range_item = item.dup
-        range_item.remove_immediate!
-        result << range_item
-        # puts "range_item="
-        # pp range_item
-
-        immediate_item = item.dup
-        immediate_item.remove_range!
-        result << immediate_item
-        # puts "immediate_item="
-        # pp immediate_item
+        0.upto(item.usages.count - 1) do |u|
+          result << item.item_with_usage(u)
+        end
       else
         result << item
       end
@@ -333,7 +428,7 @@ class HIDInfo
       byte = tag.byte | len
       result << byte.chr
       if len != 0
-        data = pack_num(t[:data])
+        data = pack_num(t[:len], t[:data])
         result << data
       end
     end
