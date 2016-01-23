@@ -126,6 +126,10 @@ class UsageRange
     [[HIDTags::USAGE_MINIMUM, min_item],
      [HIDTags::USAGE_MAXIMUM, max_item]]
   end
+
+  def values
+    (self.min..self.max).to_a
+  end
 end
 
 class UsageImmediate
@@ -153,6 +157,9 @@ class UsageImmediate
     [[HIDTags::USAGE, item]]
   end
 
+  def values
+    [unpack_num(item[:data])]
+  end
 end
 
 class UsageImmediates
@@ -178,6 +185,12 @@ class UsageImmediates
   def tags
     self.items.map do |item|
       [HIDTags::USAGE, item]
+    end
+  end
+
+  def values
+    self.items.map do |item|
+      unpack_num(item[:data])
     end
   end
 
@@ -213,7 +226,7 @@ class MainItem
   end
 
   def usages_count
-    usages.map { |x| x.count }.sum
+    usages.map { |x| x.count }.inject(0, :+)
   end
 
   def is_ambiguous?
@@ -248,6 +261,10 @@ class MainItem
   def [](tag)
     result = @local_state[tag] || @global_state[tag]
     result[:data] if result
+  end
+
+  def usage(i)
+    @usages[i]
   end
 
   def includes_usage?(page, usage)

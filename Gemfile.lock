@@ -1,11 +1,25 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    diff-lcs (1.2.5)
     ffi (1.9.10)
     libusb (0.5.1)
       ffi (>= 1.0)
     plist (3.1.0)
     rake (10.4.2)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.1)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
 
 PLATFORMS
   ruby
@@ -14,6 +28,7 @@ DEPENDENCIES
   libusb
   plist
   rake
+  rspec
 
 BUNDLED WITH
    1.11.2

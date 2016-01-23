@@ -4,4 +4,5 @@ os:
 rvm:
   - 2.2.3
 script:
+  - bundle exec rake spec
   - bundle exec rake package
