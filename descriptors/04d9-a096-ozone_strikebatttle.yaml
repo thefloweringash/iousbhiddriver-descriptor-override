@@ -1,0 +1,25 @@
+---
+- idVendor: 1241
+  idProduct: 41110
+  bcdDevice: 3332
+  bConfigurationValue: 1
+  bInterfaceNumber: 0
+  hidReportDescriptor: !binary |-
+    BQEJBqEBBQcZ4CnnFQAlAXUBlQiBApUBdQiBAZUDdQEFCBkBKQORApUFdQGR
+    AZUGdQgm/wAFBxkAKZGBAMA=
+- idVendor: 1241
+  idProduct: 41110
+  bcdDevice: 3332
+  bConfigurationValue: 1
+  bInterfaceNumber: 1
+  hidReportDescriptor: !binary |-
+    BQEJBqEBhQWVcHUBFQAlAQUHGeAp5xkAKWeBApUIgQHABQEJgKEBhQIZgSmD
+    FQAlAZUDdQGBApUBdQWBAcAFDAkBoQGFAxkAKv8CFQAm/3+VAXUQgQDABgD/
+    CQGhAYUGFQAm/wAJL5UCdQiBAsAGAf8JAaEBhQcVACb/AAkgdQiVB7ECwA==
+- idVendor: 1241
+  idProduct: 41110
+  bcdDevice: 3332
+  bConfigurationValue: 1
+  bInterfaceNumber: 2
+  hidReportDescriptor: !binary |-
+    BgD/CgD/oQEVACb/AAkwdQiVCIECCTGRAsA=
