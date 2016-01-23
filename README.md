@@ -4,6 +4,8 @@
 IOUSBHIDDriverDescriptorOverride
 ================================
 
+[![Build Status](https://travis-ci.org/thefloweringash/iousbhiddriver-descriptor-override.svg?branch=master)](https://travis-ci.org/thefloweringash/iousbhiddriver-descriptor-override)
+
 This OS X kernel extension provides a method for overriding a HID
 descriptor and ignoring the descriptor provided by the device. This is
 useful when the HID descriptor returned by a HID device is invalid or
