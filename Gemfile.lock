@@ -5,6 +5,7 @@ GEM
     libusb (0.5.1)
       ffi (>= 1.0)
     plist (3.1.0)
+    rake (10.4.2)
 
 PLATFORMS
   ruby
@@ -12,3 +13,7 @@ PLATFORMS
 DEPENDENCIES
   libusb
   plist
+  rake
+
+BUNDLED WITH
+   1.11.2
