@@ -6,3 +6,15 @@ rvm:
 script:
   - bundle exec rake spec
   - bundle exec rake package
+deploy:
+  provider: s3
+  access_key_id: AKIAITJKOSS3IQXBQSBA
+  secret_access_key:
+    secure: o7uMCR+yx68raAWCxI9C3YhRs4BWITUYOqhbN4/YRNEkd8bA6ENWPArW38vvnVEoLvMGC8sUD3JLBG5mFd0OXrPD9274L+WP7rmdjRSm4UTr9DIb0oT6nRA8qxF0im/EtOENI9cYHKJFUsh5X8nWOFyI+kwxZ4i8v+hDGBiK/P8YznbFnIEMity6SdNXFlAw/77EX4TeKjOTlohHv56KJSsnNB/l/3Ef4TrjNOSc3he58uXRvYDoStcOe4hVxDS+wy5KCwALz9aDM1gTFRXuUKjcGiFcWOsat6yPSQT/GIOZZf+b5C3lkso2KkTHJUSIZxKttj+b3QrU2HUWEpCR/nx1v5yhji9NWGtyRzgTGnNdGG7DBo6T6StWplvGmK1e0PuWwBg6Dt7L7wksRI38jBf24fPX17lp5xPNsKFbZVMyVSqPvHpjH0ivxct3JVhTMtVjK2+ZKANCmyx+ttup0yoOVquHqAn/4uXV5FbpNLlt6xoHW1QRK8vUGhuX2rJwYry3HyYQ2mgVmIpOjeqRhxxWC+eY8H0T35LPxXFOSHizmpx4FGZTGnaisBVm4BupXS4eAQtj9fWMjg4m4z7ndpp00Wanm/zV3Vu53oHHEfSgbxyO56d4NAaoJpLV1etYHD1dTvGUCikU7ahTlyDGSp+cyr0JyFadQq+sV2tzgtc=
+  bucket: iousbhiddriver-descriptor-override
+  region: ap-southeast-2
+  local-dir: pkg
+  skip_cleanup: true
+  on:
+    repo: thefloweringash/iousbhiddriver-descriptor-override
+    branch: master
