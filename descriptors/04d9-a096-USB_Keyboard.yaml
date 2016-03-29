@@ -1,0 +1,10 @@
+---
+- idVendor: 1241
+  idProduct: 41110
+  bcdDevice: 3335
+  bConfigurationValue: 1
+  bInterfaceNumber: 1
+  hidReportDescriptor: !binary |-
+    BQEJBqEBhQWVcHUBFQAlAQUHGeAp5xkAKWeBApUIgQHABQEJgKEBhQIZgSmD
+    FQAlAZUDdQGBApUBdQWBAcAFDAkBoQGFAxkAKv8CFQAm/3+VAXUQgQDABgD/
+    CQGhAYUGFQAm/wAJL5UCdQiBAsAGAf8JAaEBhQcVACb/AAkgdQiVB7ECwA==
