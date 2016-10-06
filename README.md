@@ -19,6 +19,7 @@ Supported Devices
  * Noppoo Choc Pro (04f3:5a5a, 06fe:104e)
  * Tt eSPORTS Poseidon ZX (0566:3063)
  * Ozone StrikeBattle (04d9:a096)
+ * Patech JP-PC35B (04d9:a0cd) (untested)
 
 Including the support from the [original project](#acknowledgements)
 for
