@@ -72,9 +72,9 @@ To build and install from source
 	# build
 	xcodebuild
 	sudo cp -r build/Release/IOUSBHIDDriverDescriptorOverride.kext \
-	    /System/Library/Extensions
+	    /Library/Extensions
 	sudo kextutil \
-	    /System/Library/Extensions/IOUSBHIDDriverDescriptorOverride.kext
+	    /Library/Extensions/IOUSBHIDDriverDescriptorOverride.kext
 
 [downloads]: https://thefloweringash.com/iousbhiddriver-descriptor-override/downloads/
 
@@ -115,7 +115,7 @@ Use [kextstat][] to list currently loaded modules. The module named
 
 If the driver is not loaded, use [kextutil][] on the kext.
 
-	$ sudo kextutil -v /System/Library/Extensions/IOUSBHIDDriverDescriptorOverride.kext
+	$ sudo kextutil -v /Library/Extensions/IOUSBHIDDriverDescriptorOverride.kext
 
 ### Ensure the kext is being used
 
@@ -133,7 +133,7 @@ for the device. Otherwise, check if your device is supported.
 
 For a list of supported devices examine `Info.plist`
 
-	$ plutil -p /System/Library/Extensions/IOUSBHIDDriverDescriptorOverride.kext/Contents/Info.plist
+	$ plutil -p /Library/Extensions/IOUSBHIDDriverDescriptorOverride.kext/Contents/Info.plist
 	...
 	    "Noppoo Choc Mini (primary)" => {
 	      "bInterfaceNumber" => 0

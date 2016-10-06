@@ -6,79 +6,85 @@
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleName</key>
-	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>ryangoulden.driver.${PRODUCT_NAME:rfc1034Identifier}</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
-	<key>OSBundleRequired</key>
-	<string>Console</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>Griffin PowerMate</key>
 		<dict>
-			<key>ReportDescriptorOverride</key>
-			<data>BQwJAaEBBQkZASkBFQAlAXUBlQGBAnUHlQGBAQUBCTcV+SUHdQiVAYE4BQwJARUAJv8AdQiVBIECCQF1CJUBkQIJAXUIlQixAsA=</data>
 			<key>CFBundleIdentifier</key>
-			<string>ryangoulden.driver.${PRODUCT_NAME:rfc1034Identifier}</string>
+			<string>${PRODUCT_BUNDLE_IDENTIFIER}</string>
 			<key>IOClass</key>
 			<string>IOUSBHIDDriverDescriptorOverride</string>
 			<key>IOProviderClass</key>
-			<string>IOUSBInterface</string>
-			<key>idVendor</key>
-			<integer>1917</integer>
-			<key>idProduct</key>
-			<integer>1040</integer>
-			<key>bcdDevice</key>
-			<integer>1024</integer>
+			<string>IOUSBHostInterface</string>
+			<key>ReportDescriptorOverride</key>
+			<data>
+			BQwJAaEBBQkZASkBFQAlAXUBlQGBAnUHlQGBAQUBCTcV+SUHdQiV
+			AYE4BQwJARUAJv8AdQiVBIECCQF1CJUBkQIJAXUIlQixAsA=
+			</data>
 			<key>bConfigurationValue</key>
 			<integer>1</integer>
 			<key>bInterfaceNumber</key>
 			<integer>0</integer>
+			<key>bcdDevice</key>
+			<integer>1024</integer>
+			<key>idProduct</key>
+			<integer>1040</integer>
+			<key>idVendor</key>
+			<integer>1917</integer>
 		</dict>
 		<key>Macally iShock</key>
 		<dict>
-			<key>ReportDescriptorOverride</key>
-			<data>BQEJBaEBdQiVAgkwCTEVACVENQBFRIEClQEJMBV/JS81f0UvgQIJMRUAJUQ1AEVEgQIFCRkBKRQVACUBNQBFAXUBlRSBAnUBlQSBAcA=</data>
 			<key>CFBundleIdentifier</key>
-			<string>ryangoulden.driver.${PRODUCT_NAME:rfc1034Identifier}</string>
+			<string>${PRODUCT_BUNDLE_IDENTIFIER}</string>
 			<key>IOClass</key>
 			<string>IOUSBHIDDriverDescriptorOverride</string>
 			<key>IOProviderClass</key>
-			<string>IOUSBInterface</string>
-			<key>idVendor</key>
-			<integer>8738</integer>
-			<key>idProduct</key>
-			<integer>16400</integer>
-			<key>bcdDevice</key>
-			<integer>256</integer>
+			<string>IOUSBHostInterface</string>
+			<key>ReportDescriptorOverride</key>
+			<data>
+			BQEJBaEBdQiVAgkwCTEVACVENQBFRIEClQEJMBV/JS81f0UvgQIJ
+			MRUAJUQ1AEVEgQIFCRkBKRQVACUBNQBFAXUBlRSBAnUBlQSBAcA=
+			</data>
 			<key>bConfigurationValue</key>
 			<integer>1</integer>
 			<key>bInterfaceNumber</key>
 			<integer>0</integer>
+			<key>bcdDevice</key>
+			<integer>256</integer>
+			<key>idProduct</key>
+			<integer>16400</integer>
+			<key>idVendor</key>
+			<integer>8738</integer>
 		</dict>
 	</dict>
 	<key>OSBundleLibraries</key>
 	<dict>
+		<key>com.apple.driver.usb.IOUSBHostHIDDevice</key>
+		<string>1.0.1</string>
 		<key>com.apple.iokit.IOHIDFamily</key>
-		<string>1.6</string>
-		<key>com.apple.iokit.IOUSBHIDDriver</key>
-		<string>3.7.5</string>
-		<key>com.apple.kpi.libkern</key>
-		<string>10.0.0d4</string>
+		<string>2.0</string>
 		<key>com.apple.kpi.iokit</key>
-		<string>10.0.0d4</string>
+		<string>15.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>15.0</string>
 	</dict>
+	<key>OSBundleRequired</key>
+	<string>Console</string>
 </dict>
 </plist>

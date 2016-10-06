@@ -24,8 +24,8 @@ Dir['descriptors/*.yaml'].each do |f|
     descriptor.merge!({
       'HIDDefaultBehavior' => '',
       'IOClass' => 'IOUSBHIDDriverDescriptorOverride',
-      'IOProviderClass' => 'IOUSBInterface',
-      'CFBundleIdentifier' => 'ryangoulden.driver.${PRODUCT_NAME:rfc1034Identifier}',
+      'IOProviderClass' => 'IOUSBHostInterface',
+      'CFBundleIdentifier' => '$(PRODUCT_BUNDLE_IDENTIFIER)',
       'ReportDescriptorOverride' => StringIO.new(fix_descriptor(broken_descriptor))
     })
     info['IOKitPersonalities']["#{File.basename(f)}-#{index}"] = descriptor

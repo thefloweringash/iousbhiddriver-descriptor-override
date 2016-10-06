@@ -1,7 +1,7 @@
 #include <IOKit/IOBufferMemoryDescriptor.h>
 #include "IOUSBHIDDriverDescriptorOverride.h"
 
-OSDefineMetaClassAndStructors(IOUSBHIDDriverDescriptorOverride, IOUSBHIDDriver)
+OSDefineMetaClassAndStructors(IOUSBHIDDriverDescriptorOverride, IOUSBHostHIDDevice)
 
 IOReturn IOUSBHIDDriverDescriptorOverride::newReportDescriptor(IOMemoryDescriptor **desc) const {
 	
@@ -23,6 +23,6 @@ IOReturn IOUSBHIDDriverDescriptorOverride::newReportDescriptor(IOMemoryDescripto
 		//IOLog("IOUSBHIDDriverDescriptorOverride(%s)[%p]::newReportDescriptor - "
 		//	  "No %s data in personality, calling IOUSBHIDDriver::newReportDescriptor\n",
 		//	  getName(), this, REPORT_DESCRIPTOR_OVERRIDE_KEY);
-		return IOUSBHIDDriver::newReportDescriptor(desc);
+		return IOUSBHostHIDDevice::newReportDescriptor(desc);
 	}
 }
