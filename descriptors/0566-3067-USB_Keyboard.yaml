@@ -1,0 +1,18 @@
+---
+- idVendor: 1382
+  idProduct: 12391
+  bcdDevice: 256
+  bConfigurationValue: 1
+  bInterfaceNumber: 0
+  hidReportDescriptor: !binary |-
+    BQEJBqEBBQgZASkDFQAlAXUBlQORApUFkQEFBxngKeeVCIECGQQpKAlPCVAJ
+    KwksCVEJUpUrgQIJU5UBgQIZWSlklQyBAsA=
+- idVendor: 1382
+  idProduct: 12391
+  bcdDevice: 256
+  bConfigurationValue: 1
+  bInterfaceNumber: 1
+  hidReportDescriptor: !binary |-
+    BQwJAaEBhQEZACo8AhUAJjwClQF1EIEAwAUBCYChAYUCGYEpgxUAJQF1AZUD
+    gQKVBYEBwAUBCQahAYUDBQcZPClOCSkJKgktCS4VACUBlReBAhlTKViVBoEC
+    GTApO5UMgQIZhSmLlQeBAhmQKZaVBoECCWUJL5UCgQLA

@@ -17,6 +17,7 @@ Supported Devices
  * Noppoo Choc Mini (1006:0022, 1007:8400)
  * Noppoo Choc Mid (04d9:1829)
  * Noppoo Choc Pro (04f3:5a5a, 06fe:104e)
+ * Tt eSPORTS Poseidon Z (0566:3067)
  * Tt eSPORTS Poseidon ZX (0566:3063)
  * Ozone StrikeBattle (04d9:a096)
  * Patech JP-PC35B (04d9:a0cd) (untested)
