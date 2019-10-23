@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.2.5)
-    ffi (1.9.10)
+    ffi (1.11.1)
     libusb (0.5.1)
       ffi (>= 1.0)
     plist (3.1.0)
