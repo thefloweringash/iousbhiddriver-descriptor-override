@@ -1,0 +1,8 @@
+---
+- idVendor: 9802
+  idProduct: 12292
+  bcdDevice: 288
+  bConfigurationValue: 1
+  bInterfaceNumber: 0
+  hidReportDescriptor: !binary |-
+    BQEJBqEBBQgZASkDFQAlAXUBlQORApUFkQEFBxngKeeVCIECGQQpKAlPCVAJKwksCVEJUpUrgQIJU5UBgQIZWSlklQyBAhk8KU4JKQkqCS0JLhUAJQGVF4ECGVMpWJUGgQIZMCk7lQyBAhmFKYuVB4ECGZAplpUGgQIJZQkvlQKBAnUIlQGBAcA=
