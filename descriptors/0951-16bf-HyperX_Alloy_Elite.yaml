@@ -1,0 +1,11 @@
+---
+- idVendor: 2385
+  idProduct: 5823
+  bcdDevice: 8465
+  bConfigurationValue: 1
+  bInterfaceNumber: 1
+  hidReportDescriptor: !binary |-
+    BQEJgKEBhQIZgSmDFQAlAXUBlQOBAnUFlQGBAcAFDAkBoQGFAxkAKv8CFQAm
+    /391EJUDgQB1CJUBgQHABgD/CQGhAYUGFQAm/wAJMJUDdQiBAsAGAf8JAaEB
+    hQcVACb/AAkgdQiWBwGxAsAFAQkGoQGFCAUHdQiVAYEBBQcZACr/ABUAJv8A
+    dQiVBoEAwAUBCQahAYUJlXB1ARUAJQEFBxngKecZAClngQKVCHUBgQHA
